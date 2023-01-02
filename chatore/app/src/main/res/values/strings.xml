@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">chatore</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="login">LOGIN</string>
+    <string name="enter_name">Enter Full Name</string>
+    <string name="signup">SIGNUP</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_correct_email">Enter Correct Email</string>
+    <string name="confirm_password_not_equal_to_password">Password and Confirm Password Not equal</string>
+    <string name="signup_failed">Signup Failed : %1$s</string>
+    <string name="new_user">New User???</string>
+
+</resources>
