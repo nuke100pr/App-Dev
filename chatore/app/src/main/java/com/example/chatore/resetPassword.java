@@ -78,7 +78,7 @@ public class resetPassword extends AppCompatActivity {
                                 });
 
                             }
-                        };
+                        }.start();
                     }
                     else
                     {

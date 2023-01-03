@@ -13,6 +13,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class loginactivity extends AppCompatActivity {
     private TextInputEditText etEmail ,etPassword ;
@@ -68,5 +69,20 @@ public class loginactivity extends AppCompatActivity {
     public void tvResetPasswordClick(View view)
     {
         startActivity(new Intent(loginactivity.this,resetPassword.class));
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+
+        if(firebaseUser!=null)
+        {
+            startActivity(new Intent(loginactivity.this,MainActivity.class));
+            finishAffinity();
+        }
     }
 }
