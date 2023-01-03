@@ -9,10 +9,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="332dp"
-        android:layout_height="202dp"
+        android:layout_width="214dp"
+        android:layout_height="205dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="TODO"
+        android:onClick="pickImage"
+
         android:src="@drawable/profilepic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
