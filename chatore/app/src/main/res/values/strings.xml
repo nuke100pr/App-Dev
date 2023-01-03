@@ -13,5 +13,19 @@
     <string name="new_user">New User???</string>
     <string name="failed_to_update_profile">Failed to update profile : %1$s</string>
     <string name="permission_required">Access permission is required</string>
+    <string name="save_profile">SAVE</string>
+    <string name="user_logout">LOGOUT</string>
+    <string name="change_picture">Change Picture</string>
+    <string name="remove_picture">Remove Picture</string>
+    <string name="user_profile">PROFILE</string>
+    <string name="change_password">CHANGE PASSWORD</string>
+    <string name="password_update_success">Password Updated Successfully</string>
+    <string name="password_change_failed">Something went wrong: %1$s</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="reset_password_instructions">Mail sent to : %1$s , Check spam folder.</string>
+    <string name="retry_mail">RETRY</string>
+    <string name="close_mail">CLOSE</string>
+    <string name="sending_email_failed">Email sending failed!:%1$s</string>
+    <string name="resend_timer">Resend in :%1$s</string>
 
 </resources>

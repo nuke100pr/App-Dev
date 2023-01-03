@@ -51,8 +51,10 @@ public class loginactivity extends AppCompatActivity {
             firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-
+                    if (task.isSuccessful())
+                    {
+                         startActivity(new Intent(loginactivity.this,MainActivity.class));
+                         finish();
                     }
                     else
                     {
@@ -62,5 +64,9 @@ public class loginactivity extends AppCompatActivity {
             });
 
         }
+    }
+    public void tvResetPasswordClick(View view)
+    {
+        startActivity(new Intent(loginactivity.this,resetPassword.class));
     }
 }
