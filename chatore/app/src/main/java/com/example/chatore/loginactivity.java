@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class loginactivity extends AppCompatActivity {
     private TextInputEditText etEmail ,etPassword ;
     private String email , password;
+    private View progressBar ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ public class loginactivity extends AppCompatActivity {
 
         etEmail = findViewById(R.id.etEmail);
         etPassword= findViewById(R.id.etPassword);
+        progressBar = findViewById(R.id.progressBar);
     }
 
 
@@ -46,24 +48,29 @@ public class loginactivity extends AppCompatActivity {
         {
             etPassword.setError(getString(R.string.enter_password));
         }
-        else
-        {
-            FirebaseAuth firebaseAuth =  FirebaseAuth.getInstance();
-            firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful())
-                    {
-                         startActivity(new Intent(loginactivity.this,MainActivity.class));
-                         finish();
+        else {
+            if (util.connectionAvailable(this)) {
+                progressBar.setVisibility(View.VISIBLE);
+                FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressBar.setVisibility(View.GONE);
+                        if (task.isSuccessful()) {
+                            startActivity(new Intent(loginactivity.this, MainActivity.class));
+                            finish();
+                        } else {
+                            Toast.makeText(loginactivity.this, "Failure" + task.getException(), Toast.LENGTH_SHORT).show();
+                        }
                     }
-                    else
-                    {
-                        Toast.makeText(loginactivity.this, "Failure"+task.getException(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
+                });
 
+            }
+
+            else
+            {
+                startActivity(new Intent(loginactivity.this,message_activity.class));
+            }
         }
     }
     public void tvResetPasswordClick(View view)

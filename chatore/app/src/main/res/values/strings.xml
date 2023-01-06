@@ -27,5 +27,34 @@
     <string name="close_mail">CLOSE</string>
     <string name="sending_email_failed">Email sending failed!:%1$s</string>
     <string name="resend_timer">Resend in :%1$s</string>
+    <string name="loading">PLEASE WAIT...</string>
+    <string name="no_internet_connection">NO INTERNET CONNECTION</string>
+    <string name="retry_message">RETRY</string>
+    <string name="close_message">CLOSE</string>
+    <string name="chats">Chats</string>
+    <string name="requests">Requests</string>
+    <string name="find_friends">Find Friends</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chat_empty">Chats will appear here.</string>
+    <string name="requests_empty">Requests will appear here.</string>
+    <string name="friends_empty">People will appear here.</string>
+    <string name="send_friend_request">SEND</string>
+    <string name="cancel_request">CANCEL REQUEST</string>
+    <string name="failed_fetch_friends">Failed to fetch friends :%1$s</string>
+    <string name="request_sent_success">REQUEST SENT SUCCESSFULLY</string>
+    <string name="friend_request_send_failed">FAILED TO SEND FRIEND REQUEST:%1$S</string>
+    <string name="request_cancelled_successfully">REQUEST CANCELLED SUCCESSFULLY</string>
+    <string name="friend_request_cancel_failed">Failed To Cancel Request:%1$s</string>
+    <string name="accept_request">ACCEPT REQUEST</string>
+    <string name="deny">DENY</string>
+    <string name="failed_fetch_requests">Failed to fetch requests :%1$s</string>
+    <string name="failed_deny_request">Failed to deny request :%1$s</string>
+    <string name="failed_accept_request">Failed to accept request:%1$s</string>
+    <string name="failed_fetch_chatList">Failed to fetch chat list:%1$s</string>
+    <string name ="enter_message">Enter Message</string>
+    <string name="failed_to_send_message">Failed to send Message:%1$s</string>
+    <string name="message_sent_successfully">Message Sent Successfully</string>
+    <string name="no_internet">No internet</string>
 
 </resources>
